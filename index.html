@@ -1,86 +1,107 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Gửi con 🐕</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gửi em 🌙</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    }
+
     body {
       margin: 0;
       height: 100vh;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       display: flex;
-      justify-content: center;
       align-items: center;
-      font-family: 'Segoe UI', sans-serif;
-      color: white;
-      text-align: center;
+      justify-content: center;
+      overflow: hidden;
+      color: #fff;
     }
 
-    .box {
-      background: rgba(255, 255, 255, 0.08);
-      padding: 30px;
-      border-radius: 16px;
-      max-width: 420px;
-      box-shadow: 0 0 30px rgba(0,0,0,0.4);
-      animation: fadeIn 2s ease;
+    .card {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 24px;
+      width: 90%;
+      max-width: 360px;
+      text-align: center;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,0.4);
+      margin-bottom: 16px;
+      animation: fadeIn 1.5s ease;
     }
 
     h1 {
-      margin-bottom: 15px;
-      font-size: 28px;
+      margin: 10px 0;
     }
 
     p {
       line-height: 1.6;
-      font-size: 16px;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 0.5s;
     }
 
     button {
       margin-top: 20px;
-      padding: 10px 20px;
+      padding: 12px 24px;
       border: none;
-      border-radius: 20px;
-      background: #ff6b81;
+      border-radius: 999px;
+      background: #ff4d6d;
       color: white;
-      font-size: 15px;
+      font-size: 16px;
       cursor: pointer;
+      transition: transform 0.2s;
     }
 
     button:hover {
-      background: #ff4757;
+      transform: scale(1.05);
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 
 <body>
-  <div class="box">
-    <h1>Gửi em 🌙</h1>
-    <p>
-      <br>
-      nhớ em, nhớ vy, nhớ Âu Thị Phương Vy 🫶🏻<br>
-    
-    </p>
-    <p>
-      nhoemnhoemnhoemnhoemnhoemnhoemnhoem<br>
-      nhoemnhoemnhoemnhoemnhoemnhoemnhoem<br>
-   chụt chụt chụt chụt moa moa💋
-    </p>
 
-    <button onclick="alert('hùng nhớ Vy')">
-     vào đi 🚪
-    </button>
+  <div class="card">
+    <img src="https://i.imgur.com/4AiXzf8.jpeg" alt="image">
+    <h1>Gửi em 🌙</h1>
+    <p id="text">
+      Có những điều anh không nói ra,<br>
+      không phải vì không nghĩ đến,<br>
+      mà vì sợ làm em bận lòng.
+    </p>
+    <button onclick="changeText()">Bấm thử đi</button>
   </div>
+
+  <script>
+    function changeText() {
+      document.getElementById("text").innerHTML =
+        "Chỉ mong một ngày nào đó,<br>em đọc được những dòng này<br>và mỉm cười… thế là đủ rồi.";
+    }
+  </script>
+
 </body>
 </html>
