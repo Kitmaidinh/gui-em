@@ -21,7 +21,7 @@
       background: rgba(255, 255, 255, 0.08);
       padding: 30px;
       border-radius: 16px;
-      max-width: 400px;
+      max-width: 420px;
       box-shadow: 0 0 30px rgba(0,0,0,0.4);
       animation: fadeIn 2s ease;
     }
@@ -34,6 +34,21 @@
     p {
       line-height: 1.6;
       font-size: 16px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background: #ff6b81;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff4757;
     }
 
     @keyframes fadeIn {
@@ -51,13 +66,21 @@
 
 <body>
   <div class="box">
-    <h1>Gửi em 💙</h1>
+    <h1>Gửi em 🌙</h1>
     <p>
-      Nếu em đọc được những dòng này,<br>
-      thì có lẽ anh đã lấy hết can đảm của mình.<br><br>
-      Có những điều không nói ra được bằng lời,<br>
-      nên anh gửi chúng vào đây.
+      Có những điều anh không nói ra,<br>
+      không phải vì không nghĩ đến,<br>
+      mà vì sợ làm em bận lòng.
     </p>
+    <p>
+      Chỉ mong một ngày nào đó,<br>
+      em đọc được những dòng này<br>
+      và mỉm cười… thế là đủ rồi.
+    </p>
+
+    <button onclick="alert('Anh vẫn ở đây 🌸')">
+      Bấm thử đi
+    </button>
   </div>
 </body>
 </html>
