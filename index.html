@@ -1,107 +1,197 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gửi em 🌙</title>
+<meta charset="UTF-8">
+<title>Gửi em 🌙</title>
 
+<style>
+/* ===== NỀN ===== */
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+/* ===== HỘP NỘI DUNG ===== */
+.box {
+  background: rgba(255,255,255,0.08);
+  padding: 30px;
+  border-radius: 18px;
+  max-width: 380px;
+  text-align: center;
+  animation: fadeIn 2s ease;
+  z-index: 2;
+}
+
+/* ===== ẢNH TRÒN ===== */
+.photo {https://pin.it/mNYBAt7YM}
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.5);
+  margin-bottom: 15px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ===== NÚT ===== */
+button {https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css}
+  margin-top: 15px;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 20px;
+  background: #ff6b81;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+button:hover {
+  background: #ff4757;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* ===== SAO RƠI ===== */
+.star {<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Sao rơi ✨</title>
   <style>
-    * {
-      box-sizing: border-box;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont;
-    }
-
     body {
       margin: 0;
-      height: 100vh;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      display: flex;
-      align-items: center;
-      justify-content: center;
       overflow: hidden;
-      color: #fff;
+      background: #0b1d3a;
+      height: 100vh;
     }
 
-    .card {
-      background: rgba(255,255,255,0.08);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      padding: 24px;
-      width: 90%;
-      max-width: 360px;
-      text-align: center;
-      animation: float 3s ease-in-out infinite;
+    .star {
+      position: absolute;
+      top: -100px;
+      width: 60px;
+      height: 60px;
+      background-image: url("DAN_LINK_ANH_SAO_O_DAY");
+      background-size: cover;
+      background-repeat: no-repeat;
+      animation: fall linear infinite;
+      opacity: 0.9;
     }
 
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
-    }
-
-    img {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid rgba(255,255,255,0.4);
-      margin-bottom: 16px;
-      animation: fadeIn 1.5s ease;
-    }
-
-    h1 {
-      margin: 10px 0;
-    }
-
-    p {
-      line-height: 1.6;
-      opacity: 0;
-      animation: fadeIn 2s ease forwards;
-      animation-delay: 0.5s;
-    }
-
-    button {
-      margin-top: 20px;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 999px;
-      background: #ff4d6d;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-
-    button:hover {
-      transform: scale(1.05);
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(120vh) rotate(360deg);
+        opacity: 0;
+      }
     }
   </style>
+</head>
+<body>
+
+<script>
+  const STAR_COUNT = 20;
+
+  function createStar() {
+    const star = document.createElement("div");
+    star.className = "star";
+
+    star.style.left = Math.random() * window.innerWidth + "px";
+    star.style.animationDuration = (3 + Math.random() * 3) + "s";
+    star.style.width = star.style.height = (40 + Math.random() * 30) + "px";
+
+    document.body.appendChild(star);
+
+    setTimeout(() => {
+      star.remove();
+    }, 6000);
+  }
+
+  setInterval(createStar, 300);
+</script>
+
+</body>
+</html>
+  position: absolute;
+  top: -10px;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(transparent, white);
+  opacity: 0.6;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <div class="card">
-    <img src="https://i.imgur.com/4AiXzf8.jpeg" alt="image">
-    <h1>Gửi em 🌙</h1>
-    <p id="text">
-      Có những điều anh không nói ra,<br>
-      không phải vì không nghĩ đến,<br>
-      mà vì sợ làm em bận lòng.
-    </p>
-    <button onclick="changeText()">Bấm thử đi</button>
-  </div>
+<!-- ===== SAO RƠI ===== -->
+<script>
+for (let i = 0; i < 25; i++) {
+  const star = document.createElement("div");
+  star.className = "star";
+  star.style.left = Math.random() * 100 + "vw";
+  star.style.animationDuration = (2 + Math.random() * 3) + "s";
+  star.style.animationDelay = Math.random() * 5 + "s";
+  document.body.appendChild(star);
+}
+</script>
 
-  <script>
-    function changeText() {
-      document.getElementById("text").innerHTML =
-        "Chỉ mong một ngày nào đó,<br>em đọc được những dòng này<br>và mỉm cười… thế là đủ rồi.";
-    }
-  </script>
+<!-- ===== NHẠC NỀN ===== -->
+<audio autoplay loop>
+  <source src="DAN_LINK_NHAC_O_DAY" type="audio/mpeg">
+</audio>
+
+<!-- ===== NỘI DUNG ===== -->
+<div class="box">
+  <img 
+    src="DAN_LINK_ANH_O_DAY" 
+    alt="anh"
+    class="photo"
+  >
+
+  <h2>Gửi em 🌙</h2>
+
+  <p>
+    Có những điều anh không nói ra,<br>
+    không phải vì không nghĩ đến,<br>
+    mà vì sợ làm em bận lòng.
+  </p>
+
+  <p>
+    Chỉ mong một ngày nào đó,<br>
+    em đọc được những dòng này<br>
+    và mỉm cười… thế là đủ rồi.
+  </p>
+
+  <button onclick="alert('Hùng gửi em 💙')">
+    Bấm thử đi
+  </button>
+</div>
 
 </body>
 </html>
